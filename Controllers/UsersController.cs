@@ -13,6 +13,7 @@ public class UsersController(DataContext context) : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
     {
+        //Test
         var users = await context.Users.ToListAsync();
 
         return Ok(users);
